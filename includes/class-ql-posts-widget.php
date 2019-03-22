@@ -162,6 +162,7 @@ class Ql_Posts_Widget {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'widgets_init', $plugin_admin, 'widgets_init' );
+		$this->loader->add_action( 'after_setup_theme', $plugin_admin, 'new_thumbnail_size' );
 
 	}
 

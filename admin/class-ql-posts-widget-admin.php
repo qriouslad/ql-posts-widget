@@ -109,4 +109,14 @@ class Ql_Posts_Widget_Admin {
 
 	}
 
+	/**
+	 * Add new image size to be used as thumbnails in posts widget
+	 */
+
+	public function new_thumbnail_size() {
+
+		// cropping is set to TRUE
+		add_image_size( 'xs-thumbnail', 64, 64, TRUE );
+	} 
+
 }
