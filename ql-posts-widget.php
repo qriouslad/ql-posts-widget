@@ -16,7 +16,7 @@
 * Plugin Name:       Posts Widget with Thumbnails
  * Plugin URI:        https://github.com/qriouslad/ql-posts-widget
  * Description:       WordPress plugin to add a widget that lists posts with thumbnails.
- * Version:           0.4.0
+ * Version:           0.5.0
  * Author:            Bowo
  * Author URI:        https://bowo.io
  * License:           GPL-2.0+
