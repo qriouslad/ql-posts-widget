@@ -122,6 +122,11 @@ class Ql_Posts_Widget {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-ql-posts-widget-public.php';
 
+		/**
+		 * The class responsible for defining plugin widgets
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-ql-posts-widget-widget.php';
+
 		$this->loader = new Ql_Posts_Widget_Loader();
 
 	}
@@ -156,6 +161,7 @@ class Ql_Posts_Widget {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'widgets_init', $plugin_admin, 'widgets_init' );
 
 	}
 
