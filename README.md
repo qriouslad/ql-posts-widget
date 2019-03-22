@@ -1,2 +1,3 @@
-# ql-posts-widget
-WordPress plugin to add a widget that lists posts
+# Description
+
+WordPress plugin to add a widget that lists posts with thumbnails.
