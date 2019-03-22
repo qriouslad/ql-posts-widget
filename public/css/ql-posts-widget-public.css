@@ -2,3 +2,29 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+.ql-posts-widget .entry-title {
+	font-size: 16px;
+	line-height: normal;
+	margin: 0;
+}
+
+.ql-posts-widget .ql-post {
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.ql-posts-widget .pull-left {
+	float: left;
+	padding-right: 8px;
+}
+
+.ql-posts-widget .ql-post-body {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.ql-posts-widget .entry-meta {
+	color: #888;
+	font-size: 85%;
+}

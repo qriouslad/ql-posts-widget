@@ -167,6 +167,70 @@ class Ql_Posts_Widget_Widget extends WP_Widget {
 
 		}
 
+		global $post;
+
+		if ( isset( $instance['category'] ) && $instance['category' != '' ]  ) {
+
+			$args = array(
+				'category_name' => $category,
+				'posts_per_page' => $count,
+			);
+
+		} else {
+
+			$args = array(
+				'posts_per_page' => $count,
+			);
+		}
+
+		$posts = get_posts( $args );
+
+		if ( count($posts) > 0 ) {
+
+			$output = '<div class="ql-posts-widget">';
+
+			foreach ( $posts as $post ): setup_postdata( $post );
+
+				$output .= '<div class="ql-post">';
+
+					if ( has_post_thumbnail() ):
+
+						$output .= '<div class="pull-left">';
+
+						$output .= '<a href="' . get_permalink() . '">' . get_the_post_thumbnail(
+								$post->ID,
+								'xs-thumb',
+								array( 'class' => 'img-responsive' )
+							) . '</a>';
+
+						$output .= '</div>';
+
+					endif;
+
+					$output .= '<div class="ql-post-body">';
+
+						$output .= '<h3 class="entry-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
+
+						$output .= '<div class="entry-meta">';
+
+						// $output .= '<span class="st-lp-time">' . get_the_time() . '</span> ';
+
+						$output .= get_the_date('M d, Y');
+
+						$output .= '</div>';
+
+					$output .= '</div>';
+
+				$output .= '</div>';
+
+			endforeach;
+
+			$output .= '</div>';
+
+		}
+
+		echo $output;
+
 		echo $args['after_widget'];
 
 	}
