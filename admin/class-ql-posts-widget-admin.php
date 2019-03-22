@@ -100,4 +100,13 @@ class Ql_Posts_Widget_Admin {
 
 	}
 
+	/**
+	 * Registers widgets with WordPress
+	 */
+	public function widgets_init() {
+
+		register_widget( 'Ql_Posts_Widget_Widget' );
+
+	}
+
 }
