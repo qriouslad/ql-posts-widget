@@ -172,14 +172,14 @@ class Ql_Posts_Widget_Widget extends WP_Widget {
 		if ( isset( $instance['category'] ) && $instance['category' != '' ]  ) {
 
 			$args = array(
-				'category_name' => $category,
-				'posts_per_page' => $count,
+				'category_name' => $instance['category'],
+				'posts_per_page' => $instance['count'],
 			);
 
 		} else {
 
 			$args = array(
-				'posts_per_page' => $count,
+				'posts_per_page' => $instance['count'],
 			);
 		}
 
