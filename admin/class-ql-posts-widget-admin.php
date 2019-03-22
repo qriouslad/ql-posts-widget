@@ -116,7 +116,7 @@ class Ql_Posts_Widget_Admin {
 	public function new_thumbnail_size() {
 
 		// cropping is set to TRUE
-		add_image_size( 'xs-thumbnail', 64, 64, TRUE );
+		add_image_size( 'xs-thumb', 64, 64, TRUE );
 	} 
 
 }
